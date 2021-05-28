@@ -1,0 +1,263 @@
+/*  ###  Header & Footer Stylesheet  ### */
+:root{
+  --navbar-height:70px;
+}
+
+body{
+  padding-top: calc(var(--navbar-height) + 10px);
+}
+
+
+/* Navbar Start */
+#navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--navbar-height);
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 9;
+  transition: 0.3s;
+}
+#navbar .nav-wrapper{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Left Part */
+#navbar .left{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+/* Logo */
+#navbar .brand-logo{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+/* Icon Box */
+.icon-box{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.icon-box:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+
+.icon-box .material-icons{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 32px;
+}
+
+
+/* Right */
+.right{
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.search-icon .material-icons{
+  font-size: 24px;
+}
+
+
+/* NaV List */
+#navbar .nav-list li{
+  display: inline-block;
+  margin: 0 3px;
+}
+
+/* #navbar .nav-list li a{
+  display: inline-block;
+  color:#fff;
+  padding: 0 12px;
+  line-height: 66px;
+  transition: 0.5s;
+  border-bottom: 5px solid var(--primary-color);
+
+}
+#navbar .nav-list li a:hover{
+  color: #fff;
+  background-color: rgba(255,255,255,0.2);
+  border-bottom: 4px solid #fff;
+} */
+
+#navbar .nav-list li a{
+  padding: 8px 15px;
+  color: #fff;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+#navbar .nav-list li a:hover{
+  background-color: rgba(255,255,255,0.5);
+  border-bottom: 2px solid #fff;
+}
+
+/* Register Button */
+#navbar .nav-list .register-btn{
+  padding: 8px 15px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+  background-color: transparent; 
+}
+#navbar .nav-list .register-btn:hover{
+  color: #000;
+  background-color: #fff;
+}
+
+/* Navbar End */
+
+
+
+/* Side Bar */
+#side-nav{
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #eee;
+  width: 250px;
+  height: 100vh;
+  z-index: 9999;
+  transition: 0.5s;
+}
+#side-nav.slide{
+  left: 0;
+}
+#side-nav.slide .close-icon{
+  display: block;
+}
+
+#side-nav .close-icon{
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: -45px;
+  height: 40px;
+  width: 40px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.close-icon:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+
+#side-nav .menu-list li a{
+  display: block;
+  color: #000;
+  padding: 10px 20px;
+}
+
+/* overlay */
+#overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+#overlay.show{
+  display: block;
+}
+
+#scrollToTopBtn{
+  position: fixed;
+  right: -60px;
+  bottom: 30px;
+  height: 45px;
+  width: 50px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #333;
+  z-index: 99;
+  outline: none;
+  transition: right 0.3s ease-in-out;
+  box-shadow: 0 0 3px #c0c0c0;
+}
+
+/* ###  FOOTER START  ### */
+#footer {
+  color: #fff;
+  margin-top: 30px;
+  background-color: var(--primary-color);
+}
+
+.list-container {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px 0;
+}
+.list-box > h1 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.list-box ul li {
+  font-size: 15px;
+  line-height: 2.2;
+}
+.list-box ul li i {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.list-box ul li span{
+  color: #fff;
+}
+.copyright {
+  padding: 18px 0;
+  text-align: center;
+  color: #fff;
+  background-color: var(--dark-primary-color);
+}
+
+/* ###  FOOTER END  ### */
+
+
+/* ###  MEDIA QUERIES  ### */
+
+@media only screen and (max-width: 1024px) {
+  .list-container {
+    row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  #navbar .nav-list{
+    display: none;
+  }
+} 
+
+@media only screen and (max-width: 576px) {
+  .list-container {
+    row-gap: 40px;
+    grid-template-columns: 1fr;
+  }
+} 

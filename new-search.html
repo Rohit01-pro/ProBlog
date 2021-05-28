@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search: Programming</title>
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets//css/post.css">
+    <style>
+
+
+    body{
+        padding-top: 100px;
+    }
+        
+    .search-wrapper {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        z-index: 9;
+        width: 100%;
+        height: 100px;
+        background-color: #f4f4f4;
+        overflow: hidden;
+        transition: 0.3s;
+        box-shadow:  0 0 3px #333;
+    }
+    .search-wrapper .nav-wrapper{
+        height: 100%;
+    }
+    .search-wrapper form{
+        display: grid;
+        place-content: center;
+        grid-template-columns: 70%;
+        height: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+        display: flex;
+    }
+
+    .search-input {
+        border: 0;
+        flex-grow: 1;
+        padding: 15px;
+        height: 100%;
+        font-size: 1rem;
+        font-size: 18px;
+        color: #000;
+        background-color: transparent;
+        border-bottom: 2px solid #aaa;
+    }
+    .search-input::placeholder{
+        color: gray;
+    }
+    .search-box .search-input:focus{
+        outline: none;
+        border-color: #444;
+        border-width:0 0 2px 0;
+    }
+
+    .search-box .search-icon {
+        padding: 10px 20px;
+        border: 0;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: transparent;
+        transition: all 0.3s;
+    }
+    .search-box .search-icon:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+    .search-box .search-icon:focus {
+        border: none;
+        outline: none;
+    }
+    @media only screen and (max-width:1024px){
+        .search-wrapper form{
+            grid-template-columns: 1fr;
+        }
+    }
+    @media only screen and (max-width:768px){
+        .search-wrapper .nav-wrapper{
+            padding-right: 10px;
+        }
+        .search-wrapper .search-input{
+            padding: 10px;
+            font-size: 16px;
+        }
+        .search-wrapper .search-icon{
+            padding: 10px 15px;
+        }
+        .search-wrapper .search-icon .text{
+           display: none;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="search-wrapper">
+        <div class="nav-wrapper">
+            <form action="" method="GET">
+                <div class="search-box">
+                    <input class="search-input" name="search" type="search" placeholder="Search" />
+                    <button class="search-icon" type="submit">
+                        <i class="fas fa-search"></i>&nbsp;
+                        <span class="text">Search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+<main id="search-posts">
+    <div class="container">
+        <section class="grid post-section">
+            <section class="article">
+                <h3 class="heading">Search: Programming</h3>
+                
+                <article class="post post-large">
+                    <div class="post-img">
+                        <a href="post-details.html"><img src="assets/images/entertainment1.jpg" alt=""></a>
+                    </div>
+                    <div class="post-details">
+                        <h2 class="title"><a href="post-details.html">
+                                Heading of Post 1
+                            </a></h2>
+                        <div class="post-bio">
+                            <span class="category"><a href="category-post.html">Programming</a></span>
+                            <span class="author">By Jone Doe</span>
+                            <span class="date">15 August,2021</span>
+                        </div>
+                        <p class="description">
+                            Lorem ipsum beataedolor sit amet consectetur adipisicing elit. Optio facere eaque
+                            ducimus vitae
+                            saepe. Hic quasi cumque beatae odit velit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </article>
+                                    
+                <article class="post post-large">
+                    <div class="post-img">
+                        <a href="post-details.html"><img src="assets/images/code.jpeg" alt=""></a>
+                    </div>
+                    <div class="post-details">
+                        <h2 class="title"><a href="post-details.html">
+                                Heading of Post 2
+                            </a></h2>
+                        <div class="post-bio">
+                            <span class="category"><a href="category-post.html">Programming</a></span>
+                            <span class="author">By Jone Doe</span>
+                            <span class="date">15 August,2021</span>
+                        </div>
+                        <p class="description">
+                            Lorem ipsum beataedolor sit amet consectetur adipisicing elit. Optio facere eaque
+                            ducimus vitae saepe.
+                        </p>
+                    </div>
+                </article>
+            
+                <article class="post post-large">
+                    <div class="post-img">
+                        <a href="post-details.html"><img src="assets/images/business.jpg" alt=""></a>
+                    </div>
+                    <div class="post-details">
+                        <h2 class="title"><a href="post-details.html">
+                                Heading of Post 3
+                            </a></h2>
+                        <div class="post-bio">
+                            <span class="category"><a href="category-post.html">Programming</a></span>
+                            <span class="author">By Jone Doe</span>
+                            <span class="date">15 August,2021</span>
+                        </div>
+                        <p class="description">
+                            Lorem ipsum beataedolor sit amet consectetur adipisicing elit. Optio facere eaque
+                            ducimus vitae
+                            saepe. Hic quasi cumque beatae odit velit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </article>
+                                    
+                <article class="post post-large">
+                    <div class="post-img">
+                        <a href="post-details.html"><img src="assets/images/blog3.png" alt=""></a>
+                    </div>
+                    <div class="post-details">
+                        <h2 class="title"><a href="post-details.html">
+                                Heading of Post 4
+                            </a></h2>
+                        <div class="post-bio">
+                            <span class="category"><a href="category-post.html">Programming</a></span>
+                            <span class="author">By Jone Doe</span>
+                            <span class="date">15 August,2021</span>
+                        </div>
+                        <p class="description">
+                            Lorem ipsum beataedolor sit amet consectetur adipisicing elit. Optio facere eaque
+                            ducimus vitae
+                            saepe. Hic quasi cumque beatae odit velit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </article>
+                                    
+                <article class="post post-large">
+                    <div class="post-img">
+                        <a href="post-details.html"><img src="assets/images/blog1.png" alt=""></a>
+                    </div>
+                    <div class="post-details">
+                        <h2 class="title"><a href="post-details.html">
+                                Heading of Post 5
+                            </a></h2>
+                        <div class="post-bio">
+                            <span class="category"><a href="category-post.html">Programming</a></span>
+                            <span class="author">By Jone Doe</span>
+                            <span class="date">15 August,2021</span>
+                        </div>
+                        <p class="description">
+                            Lorem ipsum beataedolor sit amet consectetur adipisicing elit. Optio facere eaque
+                            ducimus vitae
+                            saepe. Hic quasi cumque beatae odit velit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </article>
+                
+                <ul class="pagination">
+                    <li><a href=""><i class="fa fa-angle-double-left"></i></a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </section>
+
+            <aside class="aside">
+                <h1 class="heading">Trending</h1>
+
+                <article class="post post-small">
+                    <div class="post-img">
+                        <img src="assets/images/politics2.jpg" alt="">
+                    </div>
+                    <div class="post-details">
+                        <h4>Post 1 on Trending Title goes here</h4>
+                    </div>
+                </article>
+
+                <article class="post post-small">
+                    <div class="post-img">
+                        <img src="assets/images/entertainment_2.jpg" alt="">
+                    </div>
+                    <div class="post-details">
+                        <h4>Post 2</h3>
+                    </div>
+                </article>
+
+                <article class="post post-small">
+                    <div class="post-img">
+                        <img src="assets/images/entertainment2.jpg" alt="">
+                    </div>
+                    <div class="post-details">
+                        <h4>Post 3</h3>
+                    </div>
+                </article>
+                
+                <article class="post post-small">
+                    <div class="post-img">
+                        <img src="assets/images/entertainment1.jpg" alt="">
+                    </div>
+                    <div class="post-details">
+                        <h4>Post 4</h3>
+                    </div>
+                </article>
+
+                <article class="post post-small">
+                    <div class="post-img">
+                        <img src="assets/images/business.jpg" alt="">
+                    </div>
+                    <div class="post-details">
+                        <h4>Post 5</h3>
+                    </div>
+                </article>
+            </aside>
+        </section>
+    </div>
+</main>
+
+
+    <footer style="height: 70vh; background-color: lightcoral;"></footer>
+    <footer style="height: 70vh; background-color: lightslategrey;"></footer>
+</body>
+</html>

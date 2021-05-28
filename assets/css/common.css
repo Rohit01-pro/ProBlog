@@ -1,0 +1,90 @@
+@font-face{
+  font-family: Roboto;
+  src: url('../font-styles/Roboto/Roboto-Regular.ttf');
+}
+
+
+:root {
+  --primary-color: #333;
+  --dark-primary-color: #222;
+  --primary-font: Lato, Roboto;
+}
+
+/* General Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+a{  text-decoration: none; }
+
+li{ list-style: none; }
+
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px 0 20px;
+}
+
+.container .heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Container for Header and Footer */
+.nav-wrapper{
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+.grid{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(12,1fr);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+/* ###  Media Queries  ### */
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}

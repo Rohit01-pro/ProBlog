@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/material-icons.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Search</title>
+    <style>
+        .search-wrapper{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #aaa;
+        }
+        .center{
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        /* Search Box */
+        .search-box{
+            position: relative;
+            height: 60px;  
+            border-radius: 50px;
+        }
+        .search-box .search-input{
+            border: none;
+            outline: none;
+        }
+        .search-box .search-input{
+            height: 100%;
+            width: 100%;
+            font-size: 18px;
+            padding: 0 20px 0 60px;
+            border-radius: 50px
+        }
+        
+        /* Search Icon */
+        .search-box .search-icon{
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        /* Search Result Box */
+        .search-result{
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .search-result::-webkit-scrollbar{
+            width: 12px;
+        }
+        .search-result::-webkit-scrollbar-thumb{
+            cursor: pointer;
+            background-color: #666;
+            border-radius: 50px;
+        }
+        .search-result::-webkit-scrollbar-track{
+            background-color: #f4f4f4;
+            box-shadow: inset 0 0 3px #333;
+            border-radius: 50px;
+        }
+
+        /* Search Item */
+        .item{
+            margin-bottom: 5px;
+            border-bottom: 1px solid #aaa;
+        }
+        .item a{
+            display: flex;
+            padding-bottom: 3px;
+        }
+        .item a:hover{
+            background-color: #f4f4f4;
+        }
+        .item .item-img{
+            height: 60px;
+            width: 70px;
+        }
+        .item .item-img img{
+            object-fit: cover;
+        }
+        .item .item-detail{
+            padding: 8px 10px; 
+        }
+        .item .item-detail .title{
+            color: black;
+        } 
+
+
+         /* Close Icon */
+         .search-close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 9;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .search-close a{
+            display: block;
+        }
+        .search-close .material-icons{
+            font-size: 32px;
+            color: #fff;
+            line-height: 40px;
+        }
+
+        .search-close:hover{
+            background-color: #fff;
+        }
+        .search-close:hover .material-icons{
+            color: #000;
+        }
+
+
+        @media only screen and (max-width: 768px){
+            .search-wrapper .center{
+                top: 50px;
+                left: 0;
+                transform: none;
+                max-width: 100%;
+                height: calc(100% - 50px);
+            }
+            .search-wrapper .search-box{
+                height: 45px;
+            }
+            .search-box .search-icon{
+                left: 15px;
+            }
+            .search-wrapper .search-box .search-input{
+                font-size: 16px;
+                padding-left: 45px;
+            }
+
+            .search-wrapper .search-result{
+                max-height: calc(100% - 60px);
+            }
+            .search-close{
+                top: 5px;
+                right: 5px;
+            }
+        }
+
+        @media only screen  and (min-width:360px) and (max-width:992px) and (orientation:landscape){
+            .search-wrapper{
+                height: 100vh;
+                overflow: hidden;
+            }
+            .search-wrapper .center{
+                top: 0;
+                left: 0;
+                transform: translate(0,0);
+                padding: 20px 60px;
+                height: 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+            .search-wrapper .search-box{
+                height: 45px;
+            }
+            .search-wrapper .search-box .search-input{
+                font-size: 16px;
+                padding-left: 60px;
+            }
+            .search-wrapper .search-result{
+                max-height: calc(100% - 60px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section class="search-wrapper">
+        <div class="search-close">
+            <a href="index.html"><span class="material-icons">close</span></a>
+        </div>
+        
+        <div class="center">
+            <div class="search-box">
+                <input class="search-input" type="search" placeholder="Type here to search...">
+                <span class="material-icons search-icon">search</span>
+            </div>
+            <div class="search-result">
+                <!-- <h1 style="line-height: 100px; text-align: center;">No Result Found</h1> -->
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/code.jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 1</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/blog3.png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 2</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment1.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 3</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 4</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="assets/images/entertainment_2.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <h4 class="title">Search Item Heading 5</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
