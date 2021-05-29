@@ -82,13 +82,10 @@ img{
   display: inline-block;
   position: relative;
 }
-.breadcrumb li:not(:last-child){
-  margin-right: 18px;
-}
+
 .breadcrumb li:not(:last-child)::after{
   content: "\003E";
-  position: absolute;
-  right: -15px;
+  margin: 0 5px 0 8px;
   color: #aaa;
 }
 .breadcrumb li a{

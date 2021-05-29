@@ -20,11 +20,17 @@ overlay.addEventListener("click", ()=>{
 });
 
 
-// Search Box
+// Search
 const searchIcon = document.querySelector(".search-icon");
+const searchClose = document.querySelector(".search-close");
+const searchWrapper = document.querySelector(".search-wrapper");
 
 searchIcon.addEventListener("click",()=>{
-  window.location = "search.html";  
+  searchWrapper.classList.add("show");
+});
+
+searchClose.addEventListener("click",()=>{
+  searchWrapper.classList.remove("show");
 });
 
 
