@@ -15,14 +15,14 @@
 /* POST STYLE*/
 .post {
   display: flex;
-  border-radius: 3px;
   margin-bottom: 20px;
   padding: 10px;
+  border-bottom: 1px solid #aaa;
 }
-.post:hover {
+/* .post:hover {
   background-color: #f6f6f6;
-  box-shadow: 0 0 3px lightgray;
-}
+   box-shadow: 0 0 3px lightgray;
+} */
 
 .post .post-details h2,
 .post .post-details h4 {
@@ -133,7 +133,7 @@
   text-decoration: none;
   border: 1px solid #111;
   transition: 0.5s;
-  background-color: #fafafa;
+  background-color: #f9f9f9;
 }
 .pagination a:hover{
   color: #fff;

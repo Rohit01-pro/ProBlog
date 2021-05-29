@@ -1,6 +1,7 @@
 /*  ###  Header & Footer Stylesheet  ### */
 :root{
   --navbar-height:70px;
+  --hover-color: rgba(255,255,255,0.2);
 }
 
 body{
@@ -51,7 +52,7 @@ body{
   border-radius: 50%;
 }
 .icon-box:hover{
-  background-color: rgba(255,255,255,0.2);
+  background-color: var(--hover-color);
 }
 
 .icon-box .material-icons{
@@ -81,30 +82,14 @@ body{
   margin: 0 3px;
 }
 
-/* #navbar .nav-list li a{
-  display: inline-block;
-  color:#fff;
-  padding: 0 12px;
-  line-height: 66px;
-  transition: 0.5s;
-  border-bottom: 5px solid var(--primary-color);
-
-}
-#navbar .nav-list li a:hover{
-  color: #fff;
-  background-color: rgba(255,255,255,0.2);
-  border-bottom: 4px solid #fff;
-} */
-
 #navbar .nav-list li a{
   padding: 8px 15px;
+  border-radius: 50px;
   color: #fff;
-  border-bottom: 3px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 #navbar .nav-list li a:hover{
-  background-color: rgba(255,255,255,0.5);
-  border-bottom: 2px solid #fff;
+  background-color:  var(--hover-color);
 }
 
 /* Register Button */
