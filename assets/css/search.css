@@ -68,7 +68,7 @@
 
 /* Search Result Box */
 .search-result{
-    max-height: 400px;
+    max-height: 450px;
     overflow-y: auto;
     margin-top: 10px;
     border-radius: 8px;
@@ -98,11 +98,11 @@
     margin-bottom: 10px;
 }
 
-.search-result .item a{
+.search-result .item > a{
     display: flex;
     padding-bottom: 3px;
 }
-.search-result .item a:hover{
+.search-result .item > a:hover{
     background-color: #f4f4f4;
 }
 .search-result .item .item-img{
@@ -119,8 +119,18 @@
     color: #111;
     font-weight: 400;
     font-size: 16px;
+    margin-bottom: 8px;
 } 
 
+.search-result .view-more-btn{
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #333;
+    width: fit-content;
+    margin: 10px auto;
+}
 
  /* Close Icon */
  .search-close{

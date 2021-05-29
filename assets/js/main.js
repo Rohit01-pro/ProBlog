@@ -7,16 +7,19 @@ const overlay = document.querySelector('#overlay');
 menuIcon.addEventListener("click", ()=>{
   sideNav.classList.add("slide");
   overlay.classList.add("show");
+  document.body.classList.add("no-scroll");
 });
 
 closeIcon.addEventListener("click", ()=>{
   sideNav.classList.remove("slide");
   overlay.classList.remove("show");
+  document.body.classList.remove("no-scroll");
 });
 
 overlay.addEventListener("click", ()=>{
   sideNav.classList.remove("slide");
   overlay.classList.remove("show");
+  document.body.classList.remove("no-scroll");
 });
 
 
@@ -27,10 +30,12 @@ const searchWrapper = document.querySelector(".search-wrapper");
 
 searchIcon.addEventListener("click",()=>{
   searchWrapper.classList.add("show");
+  document.body.classList.add("no-scroll");
 });
 
 searchClose.addEventListener("click",()=>{
   searchWrapper.classList.remove("show");
+  document.body.classList.remove("no-scroll");
 });
 
 
