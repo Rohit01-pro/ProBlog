@@ -70,6 +70,34 @@ img{
   outline: none;
 }
 
+/* BreadCrumbs */
+.breadcrumb{
+  margin-bottom: 15px;
+  width: fit-content;
+  border-radius: 3px;
+  padding: 6px 10px;
+}
+.breadcrumb li{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+.breadcrumb li:not(:last-child){
+  margin-right: 18px;
+}
+.breadcrumb li:not(:last-child)::after{
+  content: "\003E";
+  position: absolute;
+  right: -15px;
+  color: #aaa;
+}
+.breadcrumb li a{
+  font-size: 15px;
+  color: #111;
+  text-decoration: none;
+}
+
+
 
 /* ###  Media Queries  ### */
 
