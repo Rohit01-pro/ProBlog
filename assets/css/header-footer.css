@@ -1,7 +1,6 @@
 /*  ###  Header & Footer Stylesheet  ### */
 :root{
   --navbar-height:70px;
-  --hover-color: rgba(255,255,255,0.2);
 }
 
 body{
@@ -95,10 +94,9 @@ body{
 /* Register Button */
 #navbar .nav-list .register-btn{
   padding: 8px 15px;
-  border: 2px solid #fff;
   color: #fff;
   border-radius: 50px;
-  background-color: transparent; 
+  background-color: var(--secondary-color); 
 }
 #navbar .nav-list .register-btn:hover{
   color: #000;

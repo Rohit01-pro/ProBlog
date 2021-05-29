@@ -14,15 +14,12 @@
 
 /* POST STYLE*/
 .post {
-  display: flex;
-  margin-bottom: 20px;
   padding: 10px;
   border-bottom: 1px solid #aaa;
 }
-/* .post:hover {
-  background-color: #f6f6f6;
-   box-shadow: 0 0 3px lightgray;
-} */
+.post:hover{
+  background-color: rgba(160, 160, 160, 0.1);
+}
 
 .post .post-details h2,
 .post .post-details h4 {
@@ -72,7 +69,9 @@
 
 /* LARGE POST */
 .post-large {
+  display: flex;
   column-gap: 15px;
+  margin-bottom: 20px;
 }
 .post-large .post-img {
   height: 120px;
@@ -86,7 +85,7 @@
   color: #000;
 }
 .post-large .post-details .title a:hover{
-  color: orangered;
+  color: var(--secondary-color);
 }
 .post-large .post-details .description {
   margin-top: 10px;
@@ -98,14 +97,18 @@
 }
 
 /* SMALL POST */
-.post-small {
+.post-small{
+  padding: 0;
+  margin-bottom: 10px;
+}
+.post-small a{
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 15px;
-  margin-bottom: 10px;
+  color: #000;
+  padding: 4px;
 }
-
 .post-small .post-img {
   min-width: 70px;
   width: 70px;
@@ -191,7 +194,6 @@
   font-size: 18px;
   line-height: 1.5;
   margin-top: 14px;
-  text-align: justify;
 }
 
 #post-details .post-bio{
@@ -205,6 +207,9 @@
   padding-left: 10px;
   position: relative;
 }
+#post-details .post-bio .category a{
+  color: #000;
+}
 #post-details  .post-bio .category::before{
   content: "";
   position: absolute;
@@ -217,16 +222,17 @@
   background-color: #333;
 }
 
-
+/* Author Cart */
 #post-details .author-card{
   margin-bottom: 40px;
   background-color: #f7f7f7;
   border-radius: 8px;
-  padding: 20px 15px;
+  padding: 20px;
 }
 #post-details .author-card .author-img{
   height: 100px;
   width: 100px;
+  min-width: 100px;
   border-radius: 50%;
   margin: auto;
 }
