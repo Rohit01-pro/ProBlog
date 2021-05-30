@@ -49,7 +49,7 @@
   position: relative;
 }
 .post-bio .category a{
-  color: #000;
+  color: #222;
 }
 .post-bio .category::before{
   content: "";
