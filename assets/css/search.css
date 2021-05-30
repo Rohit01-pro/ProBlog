@@ -130,7 +130,7 @@
     border-radius: 3px;
     background-color: var(--primary-color);
     width: fit-content;
-    margin: 15px auto;
+    margin: 15px auto 8px;
 }
 
  /* Close Icon */
