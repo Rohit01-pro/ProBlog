@@ -105,6 +105,7 @@
 .search-result .item > a:hover{
     background-color: #f4f4f4;
 }
+
 .search-result .item .item-img{
     height: 60px;
     width: 70px;
@@ -127,9 +128,9 @@
     color: #fff;
     padding: 10px 20px;
     border-radius: 3px;
-    background-color: #333;
+    background-color: var(--primary-color);
     width: fit-content;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
  /* Close Icon */
@@ -145,9 +146,7 @@
     cursor: pointer;
     transition: all 0.3s;
 }
-.search-close:hover{
-    transform: rotate(180deg);
-}
+
 .search-close a{
     display: block;
 }
@@ -167,7 +166,7 @@
         left: 0;
         transform: none;
         max-width: 100%;
-        height: calc(100% - 50px);
+        height: calc(100% - 80px);
     }
     .search-wrapper .search-box{
         height: 50px;
@@ -209,6 +208,6 @@
         height: 50px;
     }
     .search-wrapper .search-result{
-        max-height: calc(100% - 60px);
+        max-height: calc(100% - 80px);
     }
 }

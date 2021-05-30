@@ -121,7 +121,7 @@ body.no-scroll{
   width: 250px;
   height: 100vh;
   z-index: 9999;
-  transition: 0.5s;
+  transition: 0.4s ease-in-out;
 }
 #side-nav.slide{
   left: 0;
