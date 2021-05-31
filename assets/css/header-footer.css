@@ -219,20 +219,30 @@ body.no-scroll {
 
 #scrollToTopBtn {
   position: fixed;
-  right: -60px;
+  right: -50px;
   bottom: 30px;
-  height: 45px;
-  width: 50px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  background-color: #333;
   z-index: 99;
+
+  height: 45px;
+  width: 45px;
+  border-radius: 3px;
+  cursor: pointer;
   outline: none;
-  transition: right 0.3s ease-in-out;
-  box-shadow: 0 0 3px #c0c0c0;
+  border: none;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-out 0.5s;
+}
+#scrollToTopBtn.show{
+  right: 20px;
+}
+
+#scrollToTopBtn .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: #fff;
 }
 
 /* ###  FOOTER START  ### */
@@ -312,6 +322,14 @@ body.no-scroll {
 @media only screen and (max-width: 768px) {
   #navbar .nav-list {
     display: none;
+  }
+  #scrollToTopBtn{
+    height: 40px;
+    width: 40px;
+    bottom: 15px;
+  }
+  #scrollToTopBtn.show{
+    right: 10px;
   }
 }
 

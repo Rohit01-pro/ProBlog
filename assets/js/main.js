@@ -50,8 +50,8 @@ window.onscroll = () => {
   else header.classList.remove("fixed");
 
   // Scroll to top button
-  if (scrollTop > 400) scrollToTopBtn.style.right = "20px";
-  else scrollToTopBtn.style.right = "-60px";
+  if (scrollTop >= 200) scrollToTopBtn.classList.add("show");
+  else scrollToTopBtn.classList.remove("show");
 
   // Navbar slide
   var currentYpos = window.pageYOffset;
