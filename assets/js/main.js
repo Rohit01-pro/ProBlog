@@ -72,20 +72,20 @@ scrollToTopBtn.addEventListener("click", () => {
 });
 
 // Banner Owl Carousel
-$(document).ready(function () {
-  $("#banner-section .owl-carousel").owlCarousel({
-    loop: true,
-    nav: false,
-    items: 1,
-    center: true,
-    touch: true,
-  });
-});
+// $(document).ready(function () {
+//   $("#banner-section .owl-carousel").owlCarousel({
+//     loop: true,
+//     nav: false,
+//     items: 1,
+//     center: true,
+//     touch: true,
+//   });
+// });
 
 // Post Slider
 $(document).ready(function () {
   $("#slider-posts .owl-carousel").owlCarousel({
-    nav: false,
+    nav: true,
     items: 4,
     touch: true,
     margin: 15,
