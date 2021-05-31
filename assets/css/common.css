@@ -3,13 +3,12 @@
   src: url('../font-styles/Roboto/Roboto-Regular.ttf');
 }
 
-
 :root {
   --primary-color: #333;
   --dark-primary-color: #222;
   --secondary-color: orangered;
   --primary-font: Lato, Roboto;
-  --hover-color: rgba(255,255,255,0.2);
+  --hover-color: rgba(133, 133, 133, 0.1);
 }
 
 /* General Style */
@@ -37,7 +36,6 @@ img{
   margin: 0 auto;
   padding: 15px 20px 0 20px;
 }
-
 .container .heading {
   font-size: 26px;
   margin-bottom: 20px;
@@ -50,6 +48,7 @@ img{
   max-width: 1350px;
 }
 
+/* Grid */
 .grid{
     display: grid;
     column-gap: 10px;
@@ -61,7 +60,7 @@ img{
   display: inline-block;
   font-size: 14px;
   padding: 10px 20px;
-  background-color: crimson;
+  background-color: var(--secondary-color);
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
@@ -70,7 +69,8 @@ img{
   outline: none;
 }
 
-/* BreadCrumbs */
+
+/* ###   BreadCrumbs   ### */
 .breadcrumb{
   margin-bottom: 15px;
   width: fit-content;
@@ -94,6 +94,35 @@ img{
   text-decoration: none;
 }
 
+/* ###    PAGINATION   ### */
+.pagination{
+  width: fit-content;
+  margin: 40px auto 20px auto;
+}
+.pagination li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 1px;
+}
+
+.pagination a{
+  display: block;
+  padding: 6px 12px;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #111;
+  transition: 0.5s;
+  background-color: #f9f9f9;
+}
+.pagination a:hover{
+  color: #fff;
+  background-color: #333;
+}
+.pagination a.active{
+  color: #fff;
+  background-color: #333;
+}
 
 
 /* ###  Media Queries  ### */

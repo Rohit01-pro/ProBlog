@@ -9,17 +9,16 @@ body.no-scroll {
   height: 100vh;
 }
 
-/* Icon Box */
+/*  Icon Box  */
 .icon-box {
   position: relative;
   height: 40px;
   width: 40px;
-  color: #111;
   cursor: pointer;
   border-radius: 50%;
 }
 .icon-box:hover {
-  background-color: rgba(133, 133, 133, 0.1);
+  background-color: var(--hover-color);
 }
 .icon-box .material-icons {
   position: absolute;
@@ -27,9 +26,10 @@ body.no-scroll {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 26px;
+  color: #111;
 }
 
-/* Navbar Start */
+/*  Navbar Start  */
 
 #header {
   position: fixed;
@@ -61,6 +61,7 @@ body.no-scroll {
   align-items: center;
   justify-content: space-between;
 }
+
 
 .menu-icon {
   display: none;
@@ -176,24 +177,30 @@ body.no-scroll {
   right: -45px;
   height: 40px;
   width: 40px;
-  font-size: 24px;
   text-align: center;
   line-height: 40px;
   color: #fff;
+  font-size: 24px;
   cursor: pointer;
   border-radius: 50%;
+  font-weight: 600;
 }
 #side-nav .close-icon:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
 
 #side-nav .menu-list li a {
   display: block;
   color: #000;
   padding: 10px 20px;
 }
+#side-nav .menu-list li a:hover{
+  background-color: var(--hover-color);
+}
 
-/* Start End */
+/* Sidebar End */
+
 
 /* overlay */
 #overlay {
@@ -235,26 +242,26 @@ body.no-scroll {
   background-color: var(--primary-color);
 }
 
-.list-container {
+#footer .list-container {
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   padding: 40px 0;
 }
-.list-box > h1 {
+#footer .list-box > h1 {
   font-size: 20px;
   margin-bottom: 18px;
   text-transform: uppercase;
 }
-.list-box ul li {
+#footer .list-box ul li {
   line-height: 2.2;
 }
-.list-box ul li i {
+#footer .list-box ul li i {
   color: #fff;
   font-size: 18px;
   margin-right: 10px;
 }
-.list-box ul li span {
+#footer .list-box ul li span {
   color: #fff;
 }
 #footer .copyright {
@@ -270,7 +277,7 @@ body.no-scroll {
 /* ###  MEDIA QUERIES  ### */
 
 @media only screen and (max-width: 1024px) {
-  .list-container {
+  #footer .list-container {
     row-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -309,7 +316,7 @@ body.no-scroll {
 }
 
 @media only screen and (max-width: 576px) {
-  .list-container {
+  #footer .list-container {
     row-gap: 40px;
     grid-template-columns: 1fr;
   }
