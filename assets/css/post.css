@@ -62,7 +62,9 @@
   border-radius: 50%;
   background-color: #333;
 }
-
+/* .post-bio .author{
+  color: orangered;
+} */
 
 /* LARGE POST */
 .post-large {
@@ -193,7 +195,7 @@
 
 /*  ###  POST DETAILS PAGE  ###  */
 .post-header{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 #post-details .article .title{
   font-size: 34px;
@@ -201,7 +203,7 @@
 }
 
 #post-details .article .post-details p{
-  color: #111;
+  color: #222;
   font-size: 18px;
   line-height: 1.5;
   margin-top: 18px;
@@ -210,7 +212,7 @@
 #post-details .post-bio{
   display: flex;
   column-gap: 15px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 #post-details .post-bio .category{

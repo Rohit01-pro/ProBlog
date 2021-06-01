@@ -168,9 +168,9 @@ body.no-scroll {
 #side-nav {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -280px;
   background-color: #eee;
-  width: 250px;
+  width: 280px;
   height: 100vh;
   z-index: 9999;
   transition: 0.4s ease-in-out;
@@ -242,7 +242,7 @@ body.no-scroll {
   outline: none;
   border: none;
   background-color: var(--secondary-color);
-  transition: all 0.3s ease-out 0.5s;
+  transition: all 0.3s ease-out;
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 
               0 2px 6px 2px rgb(60 64 67 / 15%);
 }
@@ -273,7 +273,7 @@ body.no-scroll {
   padding: 40px 0;
 }
 #footer .list-box > h1 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 18px;
   text-transform: uppercase;
 }
@@ -289,7 +289,7 @@ body.no-scroll {
   color: #fff;
 }
 #footer .copyright {
-  padding: 18px 0;
+  padding: 20px 0;
   text-align: center;
   color: #fff;
   background-color: var(--dark-primary-color);
