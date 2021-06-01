@@ -19,7 +19,10 @@
   font-family: var(--primary-font);
 }
 
-a{  text-decoration: none; }
+a{  
+  background-color: transparent;
+  text-decoration: none; 
+}
 
 li{ list-style: none; }
 
