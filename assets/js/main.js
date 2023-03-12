@@ -1,6 +1,6 @@
 const menuIcon = document.querySelector(".menu-icon");
 const closeIcon = document.querySelector(".close-icon");
-const sideNav = document.querySelector("#side-nav");
+const sideNav = document.querySelector("#side-bar");
 const overlay = document.querySelector("#overlay");
 
 menuIcon.addEventListener("click", () => {
@@ -70,6 +70,28 @@ scrollToTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+
+
+const headListArr = document.querySelectorAll(".head-list");
+
+headListArr.forEach((headList)=>{
+  let icon = headList.querySelector(".material-icons");
+  let dropdownList = headList.nextElementSibling;
+
+  headList.addEventListener("click", ()=>{
+
+    if (dropdownList.style.maxHeight) {
+      dropdownList.style.maxHeight = null;
+      icon.style.transform = "rotate(-90deg)";
+    } else {
+      dropdownList.style.maxHeight = dropdownList.scrollHeight + "px";
+      icon.style.transform = "rotate(-180deg)";
+    }
+  });
+
+});
+
 
 // Banner Owl Carousel
 // $(document).ready(function () {

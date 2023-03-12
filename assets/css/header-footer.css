@@ -165,7 +165,7 @@ body.no-scroll {
 /* Navbar End */
 
 /* Side Bar Start*/
-#side-nav {
+#side-bar {
   position: fixed;
   top: 0;
   left: -280px;
@@ -173,20 +173,20 @@ body.no-scroll {
   width: 280px;
   height: 100vh;
   z-index: 9999;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-#side-nav.slide {
+#side-bar.slide {
   left: 0;
 }
-#side-nav.slide .close-icon {
-  display: block;
+#side-bar.slide .close-icon {
+  top: 15px;
 }
 
-#side-nav .close-icon {
-  display: none;
+#side-bar .close-icon {
   position: absolute;
-  top: 15px;
+  top: -50px;
   right: -45px;
+
   height: 40px;
   width: 40px;
   text-align: center;
@@ -196,18 +196,42 @@ body.no-scroll {
   cursor: pointer;
   border-radius: 50%;
   font-weight: 600;
+  transition: top 0.3s ease-in-out 0.2s;
 }
-#side-nav .close-icon:hover {
+#side-bar .close-icon:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 
-#side-nav .menu-list li a {
-  display: block;
-  color: #000;
-  padding: 10px 20px;
+
+.side-nav-list > li .head-list,
+.side-nav-list > li > h4{
+  padding: 0 20px;
+  line-height: 40px;
 }
-#side-nav .menu-list li a:hover{
+
+.side-nav-list .head-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.side-nav-list .head-list .material-icons{
+  font-size: 20px;
+  transform: rotate(-90deg);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.side-nav-list .dropdown-list{
+  padding: 0 35px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.side-nav-list > li:hover{
   background-color: var(--hover-color);
 }
 
